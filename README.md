@@ -7,11 +7,12 @@ author : [hellominchan](https://github.com/HelloMinchan)
 
     1. ssh-keygen -t rsa -b 4096 -C "" -f "$HOME/.ssh/my-key-pair" -N ""
     2. sudo cp "$HOME/.ssh/my-key-pair" "$HOME/.ssh/my-key-pair.pem"
-    3. cd key-pair
+    3. cd modules/key_pair
     4. tf init
     5. tf apply
 
-## create ec2
+## create infrastructure
 
-    1. tf init
-    2. tf apply
+    1. cd infrastructure
+    2. tf init
+    3. tf apply
