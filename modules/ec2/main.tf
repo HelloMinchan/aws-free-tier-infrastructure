@@ -1,13 +1,18 @@
-resource "aws_instance" "terraform-ec2" {
-  ami           = var.ami
-  instance_type = var.instance_type
-  key_name      = var.key_pair
+module "security_group" {
+  source = "../security_group"
+}
+
+resource "aws_instance" "ec2" {
+  ami                    = data.aws_ami.ubuntu.id
+  instance_type          = var.ec2_instance_type
+  key_name               = var.ec2_key_pair
+  vpc_security_group_ids = [module.security_group.id]
 
   root_block_device {
-    volume_size = var.volume_size
+    volume_size = var.ec2_volume_size
   }
 
   tags = {
-    Name = var.name
+    Name = var.ec2_name
   }
 }
