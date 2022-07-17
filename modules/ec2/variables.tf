@@ -1,20 +1,20 @@
-variable "ec2_instance_type" {
-  description = "ec2 instance type"
+variable "instance_type" {
+  description = "instance type"
   type        = string
   default     = "t2.micro" # Free Tier eligible
 }
-variable "ec2_key_pair" {
-  description = "ec2 key pair"
+variable "key_pair" {
+  description = "key pair"
   type        = string
   default     = "my-key-pair"
 }
-variable "ec2_volume_size" {
-  description = "ec2 volume size"
+variable "volume_size" {
+  description = "volume size"
   type        = number
   default     = 30 # Free Tier eligible
 }
-variable "ec2_name" {
-  description = "ec2 name"
+variable "name" {
+  description = "name"
   type        = string
   default     = "free-tier-ubuntu"
 }
