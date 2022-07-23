@@ -1,4 +1,4 @@
 variable "vpc_id" {
-  description = "vpc id"
+  description = "vpc_id"
   type        = string
 }
