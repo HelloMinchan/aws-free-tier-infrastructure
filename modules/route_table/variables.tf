@@ -8,15 +8,15 @@ variable "internet_gateway_id" {
   type        = string
 }
 
-variable "nat_gateway_2a_id" {
-  description = "nat_gateway_2a_id"
-  type        = string
-}
+# variable "nat_gateway_2a_id" {
+#   description = "nat_gateway_2a_id"
+#   type        = string
+# }
 
-variable "nat_gateway_2c_id" {
-  description = "nat_gateway_2c_id"
-  type        = string
-}
+# variable "nat_gateway_2c_id" {
+#   description = "nat_gateway_2c_id"
+#   type        = string
+# }
 
 variable "subnet_public_a_id" {
   description = "subnet_public_a_id"

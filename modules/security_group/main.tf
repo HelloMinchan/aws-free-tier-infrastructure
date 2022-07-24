@@ -1,5 +1,5 @@
-resource "aws_security_group" "security_group" {
-  name        = "allow_all"
+resource "aws_security_group" "my_security_group" {
+  name        = "my_security_group"
   description = "Allow all inbound traffic"
   vpc_id      = var.vpc_id
 
@@ -19,7 +19,7 @@ resource "aws_security_group" "security_group" {
   }
 
   tags = {
-    Name = "allow_all"
+    Name = "my_security_group"
   }
 }
 

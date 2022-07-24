@@ -1,20 +1,19 @@
-variable "instance_type" {
-  description = "instance type"
-  type        = string
-  default     = "t2.micro" # Free Tier eligible
+variable "vpc_security_group_ids" {
+  description = "vpc security group ids"
+  type        = list(string)
 }
-variable "key_pair" {
-  description = "key pair"
-  type        = string
-  default     = "my-key-pair"
+
+variable "availability_zones" {
+  description = "availability zones"
+  type = object({
+    a = string
+    b = string
+    c = string
+    d = string
+  })
 }
-variable "volume_size" {
-  description = "volume size"
-  type        = number
-  default     = 30 # Free Tier eligible
-}
-variable "name" {
-  description = "name"
+
+variable "subnet_id" {
+  description = "subnet id"
   type        = string
-  default     = "free-tier-ubuntu"
 }
